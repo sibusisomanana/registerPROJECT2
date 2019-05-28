@@ -1,0 +1,186 @@
+
+
+ <div class="container">
+    <h1>
+        Mlab soweto Organisation
+    </h1>
+    <br>
+    <H2>Innovation that changes lives </H2>
+
+      <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+        
+                <label class="control-label col-sm-2" for="name" >Name</label>
+                <div class="col-sm-2"> 
+                <input type="text" class="form-control" id="name" placeholder="Enter name" [(ngModel)]="model.name" name="name"> </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-10" for="Address">Address</label>
+                <div class="col-sm-10">
+                <input type="text" class="form-control" id="Address" placeholder="Enter Address" [(ngModel)]="model.Address" name="Address">
+              </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="Province">Province</label>
+                <div class="col-sm-2">
+                <input type="text" class="form-control" id="Province" placeholder="Enter Province" [(ngModel)]="model.Province" name="Province">
+              </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="Position">Position</label>
+                <div class="col-sm-2">
+                <input type="text" class="form-control" id="Position" placeholder="Enter position" [(ngModel)]="model.position" name="position">
+              </div>
+            </div>
+
+           
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="CellPhone">CellPhone</label>
+                <div class="col-sm-2">
+                <input type="text" class="form-control" id="CellPhone" placeholder="Enter CellPhone" [(ngModel)]="model.CellPhone" name="CellPhone">
+              </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="Email">Email</label>
+                <div class="col-sm-2">
+                <input type="text" class="form-control" id="Email" placeholder="Email" [(ngModel)]="model.Email" name="Email">
+              </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="BankAccount">BankAccount</label>
+                <div class="col-sm-2">
+                <input type="text" class="form-control" id="Bank-Account" placeholder="BankAccount" [(ngModel)]="model.BankAccount" name="BankAccount">
+              </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="TaxNumber">TaxNumber</label>
+                <div class="col-sm-2">
+                <input type="text" class="form-control" id="TaxNumber" placeholder="TaxNumber" [(ngModel)]="model.TaxNumber" name="TaxNumber">
+              </div>
+            </div>
+
+
+
+
+            
+            <div class="form-group">  
+                <div class="col-sm-offset-2 col-sm- 10">
+          <button type="submit" class="btn btn-default" (click)="addEmployees()"><img src="https://img.icons8.com/color/48/000000/add.png"></button>
+         
+      
+              </div>
+          </div>
+        </div>
+        <div class="side-info">
+            <table class="table table-bothered" style="color:#fff;" cellpadding="10" cellspacing="10">
+                <thead>
+                  <tr>
+                    <th width="100">Name</th>
+                    <th width="100">Address</th>
+                  
+                    <th width="100">Province</th>
+                    <th width="100">Position</th>
+                    
+                    <th width="100">CellPhone</th>
+          
+                    <th width="100">Email</th>
+                 
+                    <th width="100">BankAccount</th>
+                    <th width="100">TaxNumber</th>
+                  
+                   
+          
+          
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let ward of employees; let i=index" >
+                    
+                    <td>{{ward.name}}</td>
+                    <td>{{ward.Address}}</td>
+                    <td>{{ward.Province}}</td>
+          
+                    <td>{{ward.position}}</td>
+        
+          
+                    <td>{{ward.CellPhone}}</td>
+                    
+                    <td>{{ward.Email}}</td>
+                   
+                    <td>{{ward.BankAccount}}</td>
+                    <td>{{ward.TaxNumber}}</td>
+              
+                    <td>
+                        <button class="button"(click)="editEmployees(i)">Edit</button>
+                      <button class="button" (click)="deleteEmployees(i)">Delete</button>
+                    </td>
+                  </tr> 
+                </tbody>
+            </table>
+         
+
+         
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                    
+                    
+                        <label class="control-label col-sm-2" for="name" >Name</label>
+                        <div class="col-sm-2"> 
+                        <input type="text" class="form-control" id="name" placeholder="Enter name" [(ngModel)]="model2.name" name="name"> </div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label class="control-label col-sm-10" for="Address">Address</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" id="Address" placeholder="Enter Address" [(ngModel)]="model2.Address" name="Address">
+                      </div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="Province">Province</label>
+                        <div class="col-sm-2">
+                        <input type="text" class="form-control" id="Province" placeholder="Enter Province" [(ngModel)]="model2.Province" name="Province">
+                      </div>
+                    </div>
+            
+            
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="Email">Email</label>
+                        <div class="col-sm-2">
+                        <input type="text" class="form-control" id="Email" placeholder="Email" [(ngModel)]="model2.Email" name="Email">
+                      </div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="BankAccount">BankAccount</label>
+                        <div class="col-sm-2">
+                        <input type="text" class="form-control" id="BankAccount" placeholder="BankAccount" [(ngModel)]="model2.BankAccount" name="BankAccount">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="TaxNumber">TaxNumber</label>
+                        <div class="col-sm-2">
+                      
+                          <input type="text" class="form-control" id="TaxNumber" placeholder="TaxNumber" [(ngModel)]="model2.TaxNumber" name="TaxNumber"><br>
+                          <button class="button"(click)="Update()">Update</button>
+                     
+        </div>
+         
+      </div>
+      
+      </div>
+              
+                 
+
+ </div>
+
+
